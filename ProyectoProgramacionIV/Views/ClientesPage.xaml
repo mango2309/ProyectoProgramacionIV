@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgramacionIV.Views.ClientesPage"
+             Title="Clientes">
+
+    <StackLayout Padding="10">
+        <Label Text="Agregar Nuevo Cliente" FontSize="20" HorizontalOptions="Center" />
+
+        <Entry x:Name="NombreEntry" Placeholder="Nombre" />
+
+        <Entry x:Name="EmailEntry" Placeholder="Email" />
+
+        <Button Text="Agregar Cliente" Clicked="AddClienteButton_Clicked" />
+
+        <ListView x:Name="ClientesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Email}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Eliminar Todos los Clientes" 
+                BackgroundColor="Red" 
+                TextColor="White" 
+                Clicked="DeleteAllClientesButton_Clicked" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgramacionIV.Views.MainPage">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="30" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <Image Source="logo.png" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" />
+            
+            <!-- Título del Proyecto -->
+            <Label Text="Sistema de Gestión de Alquiler de Autos" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <!-- Descripción del Proyecto -->
+            <Label Text="Bienvenido al sistema de gestión de alquiler de autos. Aquí puedes administrar clientes, autos y reservas de forma eficiente y sencilla." 
+                   FontSize="16" 
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap" />
+
+            <!-- Botón para ir a la página de Clientes -->
+            <Button Text="Ingresar Clientes" 
+                    FontSize="18" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    CornerRadius="10"
+                    Padding="10"
+                    Clicked="OnClientesButtonClicked" />
+        </VerticalStackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

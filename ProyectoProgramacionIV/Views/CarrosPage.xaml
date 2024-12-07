@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgramacionIV.Views.CarrosPage"
+             Title="CarrosPage">
+
+    <StackLayout Padding="10">
+
+        <!-- Picker para seleccionar un carro -->
+        <Picker x:Name="CarroPicker" Title="Selecciona un modelo de auto">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Kia - Rio</x:String>
+                    <x:String>Toyota - Corolla</x:String>
+                    <x:String>Chevrolet - Spark</x:String>
+                    <x:String>Nissan - Sentra</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <ListView x:Name="CarrosListView" IsPullToRefreshEnabled="True" ItemSelected="CarrosListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Marca}" Detail="{Binding Modelo}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button Text="Agregar Carro" Clicked="AddCarroButton_Clicked" />
+        <Button Text="Eliminar Todos los Carros" 
+        BackgroundColor="Red" 
+        TextColor="White" 
+        Clicked="DeleteAllCarrosButton_Clicked" />
+        
+    </StackLayout>
+</ContentPage>
