@@ -25,24 +25,24 @@ public partial class CarrosPage : ContentPage
 
     private void AddCarroButton_Clicked(object sender, EventArgs e)
     {
-        if (CarroPicker.SelectedIndex == -1) // Asegurarse de que el usuario haya seleccionado un auto
+        if (CarroPicker.SelectedIndex == -1) 
         {
             DisplayAlert("Error", "Por favor selecciona un modelo de auto.", "OK");
             return;
         }
 
         var seleccion = CarroPicker.SelectedItem.ToString();
-        var datos = seleccion.Split('-'); // Divide la cadena "Marca - Modelo"
+        var datos = seleccion.Split('-'); 
 
         var newCarro = new Carro
         {
-            IdCarro = _carros.Count + 1,  // Asignar un ID único
-            Marca = datos[0].Trim(),      // Extraer la marca
-            Modelo = datos[1].Trim()     // Extraer el modelo
+            IdCarro = _carros.Count + 1,  
+            Marca = datos[0].Trim(),      
+            Modelo = datos[1].Trim()     
         };
 
         _carros.Add(newCarro);
-        CarrosListView.ItemsSource = null;  // Refrescar la lista
+        CarrosListView.ItemsSource = null;  
         CarrosListView.ItemsSource = _carros;
 
         SaveCarros();

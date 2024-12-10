@@ -5,7 +5,7 @@
              Title="Clientes">
 
     <StackLayout Padding="10">
-        <Label Text="Agregar Nuevo Cliente" FontSize="20" HorizontalOptions="Center" />
+        <Label Text="Agregar Nuevo Cliente" FontSize="20" HorizontalOptions="Center" BackgroundColor="ForestGreen" />
 
         <Entry x:Name="NombreEntry" Placeholder="Nombre" />
 

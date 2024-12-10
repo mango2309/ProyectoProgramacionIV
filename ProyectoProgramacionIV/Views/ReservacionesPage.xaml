@@ -14,7 +14,7 @@
 
         <DatePicker x:Name="FechaReservaPicker" />
 
-        <Button Text="Agregar Reservación" Clicked="AddReservacionButton_Clicked" />
+        <Button Text="Agregar Reservación" Clicked="AddReservacionButton_Clicked" BackgroundColor="Green"/>
 
         <ListView x:Name="ReservacionesListView">
             <ListView.ItemTemplate>
